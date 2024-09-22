@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
-        <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"
-        ></script>
-        <script src="app.js"></script>
-        <title>Cappy Collect</title>
-    </head>
-    <body></body>
+  <head>
+    <title>Capy Math Adventures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"
+    ></script>
+    <script src="app.js"></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #gameCanvas {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #textInputPopup {
+        display: none;
+        position: absolute;
+        top: 40%;
+        left: 650px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: white;
+        border: 1px solid black;
+        z-index: 1;
+      }
+      #textInputPopup input {
+        width: 300px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      #textInputPopup button {
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameCanvas">
+      <div id="textInputPopup">
+        <label id='inputLabel' for="textInput"></label>
+        <input type="text" id="textInput" placeholder="Enter text here" />
+        <button id="submitButton">Submit</button>
+      </div>
+    </div>
+  </body>
 </html>
